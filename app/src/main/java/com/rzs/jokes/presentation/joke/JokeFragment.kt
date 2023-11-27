@@ -1,15 +1,16 @@
 package com.rzs.jokes.presentation.joke
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import com.rzs.jokes.R
 import com.rzs.jokes.databinding.FragmentJokeBinding
 import com.rzs.jokes.di.PresentationModule.provideViewModelFactory
 import com.rzs.jokes.presentation.core.UiPresentation
@@ -47,6 +48,8 @@ class JokeFragment : Fragment(), UiPresentation<JokeUiState> {
     private fun getNewJoke() {
         binding?.newJoke?.setOnClickListener {
             emitUiEvent(JokeUiEvent.GetAnotherJokeUiEvent(lang = "es"))
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.dead8bits)
+            mediaPlayer?.start()
         }
     }
 
@@ -80,9 +83,17 @@ class JokeFragment : Fragment(), UiPresentation<JokeUiState> {
             binding?.firstPartJoke?.visibility = View.VISIBLE
             binding?.firstPartJoke?.text = jokeAttrs.question
             binding?.jokeAnswer?.text = jokeAttrs.response
+            binding?.cat11?.visibility=View.VISIBLE
+            binding?.cat22?.visibility=View.GONE
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.miau1)
+            mediaPlayer?.start()
         } else {
             binding?.firstPartJoke?.visibility = View.GONE
             binding?.jokeAnswer?.text = jokeAttrs.joke
+            binding?.cat11?.visibility=View.GONE
+            binding?.cat22?.visibility=View.VISIBLE
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.miau2)
+            mediaPlayer?.start()
         }
     }
 
