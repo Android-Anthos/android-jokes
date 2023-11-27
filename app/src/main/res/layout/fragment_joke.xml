@@ -31,8 +31,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_category" />
-            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category"
             android:textColor="@color/white"/>
 
         <TextView
@@ -48,8 +47,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
             android:textColor="@color/white"/>
 
         <TextView
@@ -64,8 +62,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/first_part_joke" />
-            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/first_part_joke"
             android:textColor="@color/white"/>
 
         <ProgressBar

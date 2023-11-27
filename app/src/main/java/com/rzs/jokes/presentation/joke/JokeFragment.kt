@@ -48,8 +48,8 @@ class JokeFragment : Fragment(), UiPresentation<JokeUiState> {
     private fun getNewJoke() {
         binding?.newJoke?.setOnClickListener {
             emitUiEvent(JokeUiEvent.GetAnotherJokeUiEvent(lang = "es"))
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.dead8bits)
-            mediaPlayer?.start()
+          //  val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.dead8bits)
+           // mediaPlayer?.start()
         }
     }
 
@@ -85,15 +85,15 @@ class JokeFragment : Fragment(), UiPresentation<JokeUiState> {
             binding?.jokeAnswer?.text = jokeAttrs.response
             binding?.cat11?.visibility=View.VISIBLE
             binding?.cat22?.visibility=View.GONE
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.miau1)
-            mediaPlayer?.start()
+           // val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.miau1)
+            //mediaPlayer?.start()
         } else {
             binding?.firstPartJoke?.visibility = View.GONE
             binding?.jokeAnswer?.text = jokeAttrs.joke
             binding?.cat11?.visibility=View.GONE
             binding?.cat22?.visibility=View.VISIBLE
-            val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.miau2)
-            mediaPlayer?.start()
+           // val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.miau2)
+           // mediaPlayer?.start()
         }
     }
 
