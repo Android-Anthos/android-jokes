@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,28 +9,29 @@
     tools:context=".presentation.joke.JokeFragment"
     android:background="@color/black">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
         <TextView
             android:id="@+id/tv_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
             android:text="CATEGORIA"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="28dp"
             android:text="¡Chiste del día!"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category" />
             android:textSize="18sp"
             android:textColor="@color/white"/>
 
@@ -38,11 +40,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="12dp"
             android:gravity="center"
             android:text="¿Primera parte del chiste?"
             android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
             android:textStyle="bold"
             android:textColor="@color/white"/>
 
@@ -51,10 +57,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="12dp"
             android:gravity="center"
             android:text="Respuesta del chiste"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_part_joke" />
             android:textSize="18sp"
             android:textColor="@color/white"/>
 
@@ -63,24 +73,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            android:layout_marginTop="30dp" />
+            app:layout_constraintBottom_toTopOf="@+id/cat11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/joke_answer" />
 
         <ImageView
-            android:id="@+id/image_joke"
+            android:id="@+id/cat11"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/cat11"
+            app:layout_constraintBottom_toTopOf="@+id/new_joke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/cat22"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/cat22"
+            app:layout_constraintBottom_toTopOf="@+id/new_joke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/new_joke"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:src="@drawable/cat2" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:backgroundTint="@color/green"
+            android:text="Nuevo chiste"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/new_joke"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/green"
-        android:text="Nuevo chiste"
-        android:textColor="@color/white" />
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
