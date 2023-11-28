@@ -3,4 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_to_joke">Welcome to Joke</string>
+    <string name="category">CATEGORIA</string>
+    <string name="title_joke">¡Chiste del día!</string>
+    <string name="first_part_joke">¿Primera parte del chiste?</string>
+    <string name="response_joke">Respuesta del chiste</string>
+    <string name="new_joke">Nuevo chiste</string>
 </resources>
