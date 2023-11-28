@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/jokeFragment"
         android:name="com.rzs.jokes.presentation.joke.JokeFragment"
-        android:label="fragment_joke"
+        android:label="@string/welcome_to_joke"
         tools:layout="@layout/fragment_joke" />
 </navigation>
